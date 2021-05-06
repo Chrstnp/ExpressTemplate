@@ -1,32 +1,13 @@
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import express from 'express';
-import helmet from 'helmet';
-import morgan from 'morgan';
-import favicon from 'serve-favicon';
-import { corsOptions, limiter } from './config';
-import homeRouter from './routes/home';
-import ordersRouter from './routes/orders';
+import HomeController from './controllers/Home.controller';
+import App from './app';
+import OrdersController from './controllers/Orders.controller';
 
-const app = express();
+const app = new App(
+  [
+    new HomeController(),
+    new OrdersController(),
+  ],
+  8000,
+);
 
-// Middlewares
-app.use(morgan("common"));
-app.use(helmet());
-app.use(cors(corsOptions));
-app.use(limiter); //  apply to all requests
-app.use(favicon('favicon.ico')) // Serve Favicon
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-// Port
-const PORT = 8000;
-
-//Routes
-
-app.use('/', homeRouter);
-app.use('/orders', ordersRouter);
-
-app.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
-});
+app.listen();
