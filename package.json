@@ -1,0 +1,20 @@
+{
+  "name": "api.amcordesign.com",
+  "version": "1.0.0",
+  "description": "Back amcordesign",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "api.amcordesign.com"
+  },
+  "author": "Amcor",
+  "license": "ISC"
+}
