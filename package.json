@@ -4,12 +4,21 @@
   "description": "Back amcordesign",
   "main": "server.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "logrocket": "^1.1.0"
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.6.0",
+    "logrocket": "^1.1.0",
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.10",
     "@types/express": "^4.17.11",
+    "@types/express-rate-limit": "^5.1.1",
+    "@types/morgan": "^1.9.2",
     "@types/node": "^15.0.2",
+    "@types/serve-favicon": "^2.5.2",
     "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
