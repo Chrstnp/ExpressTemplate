@@ -774,11 +774,6 @@ latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
-logrocket@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.1.0.tgz#217615aae0ef2e7cf3df3f11a7db757c10b6299f"
-  integrity sha512-G0nzd6pqKlnncnLc7R9x23GBjKiiC/3nort3FIhwWS0byxePlBQSr6xgpePBo7Ohra/ZvidTK89Iii0vI6pKkg==
-
 lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"

@@ -1,12 +1,11 @@
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
-import LogRocket from 'logrocket';
 import morgan from 'morgan';
 import favicon from 'serve-favicon';
 import { corsOptions, limiter } from './config';
-
-LogRocket.init('cem5zc/dev-api-amcor-desgin');
+import homeRouter from './routes/home';
+import ordersRouter from './routes/orders';
 
 const app = express();
 
@@ -23,13 +22,10 @@ app.use(favicon('favicon.ico'))
 const PORT = 8000;
 
 //Routes
-app.get('/', (req, res) =>
-  res.send('Server is up')
-);
 
-app.get('/orders', (req, res) =>
-  res.send('here should list orders')
-);
+app.use('/', homeRouter);
+app.use('/orders', ordersRouter);
+
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
 });

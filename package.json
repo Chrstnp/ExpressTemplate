@@ -8,7 +8,6 @@
     "express": "^4.17.1",
     "express-rate-limit": "^5.2.6",
     "helmet": "^4.6.0",
-    "logrocket": "^1.1.0",
     "morgan": "^1.10.0",
     "serve-favicon": "^2.5.0"
   },
@@ -27,7 +26,7 @@
     "build": "tsc --project ./",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/server.js",
-    "dev": "nodemon server.ts"
+    "dev": "nodemon ./src/server.ts"
   },
   "repository": {
     "type": "git",
