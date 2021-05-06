@@ -1,3 +1,4 @@
+import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
@@ -14,9 +15,9 @@ app.use(morgan("common"));
 app.use(helmet());
 app.use(cors(corsOptions));
 app.use(limiter); //  apply to all requests
-
-// Serve Favicon
-app.use(favicon('favicon.ico'))
+app.use(favicon('favicon.ico')) // Serve Favicon
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Port
 const PORT = 8000;
